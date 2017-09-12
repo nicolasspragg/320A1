@@ -7,6 +7,8 @@
 #include<string>
 #include <sstream>
 #include<vector>
+#include<random>
+#include <stdlib.h>
 using namespace std;
 
 
@@ -37,11 +39,18 @@ void InsultGenerator::initialize() {
 	listOfInsults3.push_back(t3);
 	}
 
-
+	//test if lists loaded
+	
 	for (size_t i = 0; i < listOfInsults1.size(); i++)
 	{
-		cout << listOfInsults1[i] << ' ';
+		//cout << listOfInsults1[i] << '	' << listOfInsults2[i] << '	' << listOfInsults3[i] << endl;
+		int test = randomNum();
+	cout << test << endl;
 	}
+	//cout <<listOfInsults1.size();
+	
+	
+	
 
 
 }
@@ -62,7 +71,9 @@ vector<string> InsultGenerator::generateAndSave(string str, int n)
 
 int InsultGenerator::randomNum()
 {
-	return 0;
+	int num = rand()%49;
+	cout << num;
+	return num;
 }
 
 NumInsultsOutOfBounds::NumInsultsOutOfBounds(const string &m) : message(m) {};
@@ -83,5 +94,7 @@ try {
 		cerr << e.what() << endl;
 		return 1;
 	}
+	
+
 	return 0;
 }
