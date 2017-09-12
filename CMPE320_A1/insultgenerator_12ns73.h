@@ -3,8 +3,17 @@
 #include <vector>
 #include <set>
 #include<fstream>
-
 #include <sstream>
+#include <iostream>
+#include<fstream>
+#include<string>
+#include<vector>
+#include <stdlib.h>
+#include <stdio.h>     
+#include <time.h>  
+#include<random>
+#include <cstdlib> 
+#include <ctime>
 
 
 using namespace std;
@@ -20,7 +29,7 @@ public:
 		vector<string> generateAndSave(const string str, const int n);
 private:
 
-		int randomNum();
+		int setRandomNum();
 		vector<string> listOfInsults1;
 		vector<string> listOfInsults2;
 		vector<string> listOfInsults3;
