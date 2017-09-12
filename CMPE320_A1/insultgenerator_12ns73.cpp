@@ -77,9 +77,11 @@ string FileException::what() {
 // testing 
 int main() {
 	InsultGenerator ig;
-
-	ig.initialize();
-
-	cin.get();
+try {
+		ig.initialize();
+	} catch (FileException& e) {
+		cerr << e.what() << endl;
+		return 1;
+	}
 	return 0;
 }
