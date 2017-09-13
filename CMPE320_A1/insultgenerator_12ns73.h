@@ -14,6 +14,7 @@
 #include<random>
 #include <cstdlib> 
 #include <ctime>
+#include<iterator>
 
 
 using namespace std;
@@ -34,8 +35,6 @@ private:
 		vector<string> listOfInsults2;
 		vector<string> listOfInsults3;
 		set<string> setOfInsults;
-		
-
 };
 
 class FileException {
